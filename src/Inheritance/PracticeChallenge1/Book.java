@@ -1,13 +1,13 @@
 package Inheritance.PracticeChallenge1;
 
 public class Book extends LibraryItem{
-    private int isBnID;
+    private String isbn;
 
-    public int getIsBnID() {
-        return isBnID;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setIsBnID(int isBnID) {
-        this.isBnID = isBnID;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 }

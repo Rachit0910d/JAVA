@@ -9,7 +9,7 @@ public class BankAccount {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(long accountNumber) {
 
         this.accountNumber = accountNumber;
     }
@@ -54,8 +54,7 @@ public class BankAccount {
             System.out.println("Fail occur due to improper amount choose by account holder !");
         }
         else if(money > balance){
-            money = balance;
-            balance = 0;
+            System.out.println("Insufficient balance. You cannot withdraw more than your current balance.");
         }
         else{
             balance -= money;

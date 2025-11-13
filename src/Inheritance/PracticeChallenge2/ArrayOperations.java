@@ -1,5 +1,7 @@
 package Inheritance.PracticeChallenge2;
 
+import java.util.Arrays;
+
 public class ArrayOperations {
     private int[] arr;
 
@@ -17,19 +19,13 @@ public class ArrayOperations {
         }
 
         double median(){
-            for (int i = 0, j = arr.length-1; i<j; i++, j--){
-                if(arr[i]>arr[j]){
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
+            Arrays.sort(arr);
             double med;
-            if(arr.length / 2 == 0 ){
-                med = arr[(arr.length / 2) - 1];
+            if(arr.length % 2 == 0 ){
+                med = (arr[arr.length / 2] + arr[(arr.length / 2) - 1]) / 2.0;
             }
             else{
-                med = arr[(arr.length / 2)];
+                med = arr[arr.length / 2];
             }
             return med;
 

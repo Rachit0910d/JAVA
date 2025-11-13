@@ -3,32 +3,20 @@ package Polymorphism;
 public class TestClass {
 
     public static void main(String[] args) {
-        Car c = new Car();
-    //  Vehicle v = new Vehicle();
-        Plane p = new Plane();
+        Vehicle car = new Car();
+        Vehicle plane = new Plane();
 
-        CastTest2(c);
-    //  castTest(v);
-        castTest(p);
-    //  Vehicle vCar = new Car();
+        testVehicle(car);
+        testVehicle(plane);
 
-
+        // To use methods specific to Car, we need to cast
+        if (car instanceof Car) {
+            Car specificCar = (Car) car;
+            System.out.println("Number of doors: " + specificCar.noOfDoors());
+        }
     }
 
-    private static void castTest(Vehicle veh){
-    //  Car cVehicle  = (Car) veh;
+    private static void testVehicle(Vehicle veh){
         veh.start();
-    //  cVehicle.start();
-    //  cVehicle.noOfDoors();
-
-    //  ((Car) veh).noOfDoors();
-    }
-
-    private static void CastTest2(Car car){
-    //  Car cVehicle = new Car();
-    //  cVehicle.noOfDoors();
-        car.start();
-    //    cVehicle.start();
-
     }
 }
